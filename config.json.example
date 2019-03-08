@@ -2,5 +2,6 @@
   "BOT_TOKEN": "CHANGME",
   "BOT_DESCRIPTION": "Excalibur bot",
   "BOT_PREFIX": "!",
-  "COGS_DIR": "cogs"
+  "COGS_DIR": "cogs",
+  "PREFIX_SEPARATORS": ["spec"]
 }

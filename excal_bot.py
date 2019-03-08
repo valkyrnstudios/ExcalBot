@@ -12,10 +12,29 @@ from os.path import isfile, join
 with open('config.json') as json_data_file:
     config = json.load(json_data_file)
 
+prefix_separators = config['PREFIX_SEPARATORS']
+
 bot = commands.Bot(
     case_insensitive=True,
     command_prefix=commands.when_mentioned_or(config['BOT_PREFIX']),
     description=config['BOT_DESCRIPTION'])
+
+@bot.event
+async def on_message(message):
+    if message.author.bot:
+        return
+
+    message.content = message.content.lower()
+    print(f'"Original {message.content}"')
+
+    for prefix in prefix_separators:
+        if message.content.startswith(prefix, 1) and not message.content.startswith(f'{prefix} ', 1):
+            message.content = message.content.replace(prefix, f'{prefix} ')
+            break
+
+    print(f'"Transformed {message.content}"')
+
+    await bot.process_commands(message)
 
 @bot.event
 async def on_ready():

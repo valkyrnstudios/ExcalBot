@@ -5,12 +5,8 @@ class Specs(commands.Cog, name='Spec commands'):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.group(pass_context=True)
+    @commands.group(pass_context=True, aliases=['talents'])
     async def spec(self, ctx):
-        """Says if a user is cool.
-
-        In reality this just checks if a subcommand is being invoked.
-        """
         if ctx.invoked_subcommand is None:
             try:
                 pass

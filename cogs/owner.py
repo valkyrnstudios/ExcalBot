@@ -46,6 +46,5 @@ class OwnerCog(commands.Cog, name='Owner commands', command_attrs=dict(hidden=Tr
         else:
             await ctx.send('**`SUCCESS`**')
 
-
 def setup(bot):
     bot.add_cog(OwnerCog(bot))
