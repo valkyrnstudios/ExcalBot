@@ -3,5 +3,6 @@
   "BOT_DESCRIPTION": "Excalibur bot",
   "BOT_PREFIX": "!",
   "COGS_DIR": "cogs",
-  "PREFIX_SEPARATORS": ["spec"]
+  "PREFIX_SEPARATORS": ["spec"],
+  "HELP_ALIASES": ["!egbot","!excalbot"]
 }
