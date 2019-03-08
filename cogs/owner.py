@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 
+# Based on https://gist.github.com/OneEyedKnight/f0411f9a5e9dea23b96be0bf6dd86d2d#file-owner-py
+
 class OwnerCog(commands.Cog, name='Owner commands', command_attrs=dict(hidden=True)):
     def __init__(self, bot):
         self.bot = bot
