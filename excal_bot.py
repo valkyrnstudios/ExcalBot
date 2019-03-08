@@ -25,14 +25,14 @@ async def on_message(message):
         return
 
     message.content = message.content.lower()
-    print(f'"Original {message.content}"')
+    print(f'Original {message.content}')
 
     for prefix in prefix_separators:
         if message.content.startswith(prefix, 1) and not message.content.startswith(f'{prefix} ', 1):
             message.content = message.content.replace(prefix, f'{prefix} ')
             break
 
-    print(f'"Transformed {message.content}"')
+    print(f'Transformed {message.content}')
 
     await bot.process_commands(message)
 
