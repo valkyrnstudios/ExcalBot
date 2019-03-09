@@ -28,7 +28,7 @@ class EG(commands.Cog, name='Eternal Gamers'):
 
         await ctx.send(embed=embed)
 
-    @commands.command(name='beef', aliases=['twam',], hidden=True)
+    @commands.command(name='beef', aliases=['twam'], hidden=True)
     async def beef(self, ctx):
         await ctx.send('Soon:tm:')
 
