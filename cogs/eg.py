@@ -9,7 +9,24 @@ class EG(commands.Cog, name='Eternal Gamers'):
 
     @commands.command(name='signup', aliases=['website'])
     async def signup(self, ctx):
-        await ctx.send('http://eternalgamers.org/events')
+        embed = discord.Embed(title='http://eternalgamers.org',
+                              description='_Signup for Raids_',
+                              colour=2550255)
+
+        embed.set_author(name='Raiding Schedule',
+                         url='http://eternalgamers.org/events',
+                         icon_url='https://upload.wikimedia.org/wikipedia/commons/3/3d/Asahi-eg-company_icon.png')
+
+        embed.add_field(name=':computer: Mark yourself as Yes, No, or Maybe, for all raid days :computer:',
+                        value='Signing up is quick and easy; you\'re able to sign up for multiple raid days in advance if you know you will be making the whole month.')
+
+        embed.add_field(name='We require all raiders to have a website account and signup for raids http://eternalgamers.org/events',
+                        value='_!egbot to list bot commands_')
+
+        embed.set_footer(text='EGBot',
+                        icon_url='https://upload.wikimedia.org/wikipedia/commons/3/3d/Asahi-eg-company_icon.png')
+
+        await ctx.send(embed=embed)
 
     @commands.command(name='beef', aliases=['twam',], hidden=True)
     async def beef(self, ctx):
