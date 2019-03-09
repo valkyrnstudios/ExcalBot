@@ -45,6 +45,21 @@ async def on_ready():
     print(f'Logged in as {bot.user.name} ({bot.user.id})')
     await bot.change_presence(status=Status.online, activity=Game(name='Waiting to be helpful'))
 
+@bot.command()
+async def invite(ctx):
+    embed = discord.Embed(title='https://discordapp.com/oauth2/authorize?&client_id=551928862079189002&scope=bot&permissions=0',
+                        description='Discord Bot Invite',
+                        colour=2550255)
+
+    embed.set_author(name='Discord Bot Invite',
+                    url='https://discordapp.com/oauth2/authorize?&client_id=551928862079189002&scope=bot&permissions=0',
+                    icon_url='https://upload.wikimedia.org/wikipedia/commons/3/3d/Asahi-eg-company_icon.png')
+
+    embed.set_footer(text='EGBot',
+                    icon_url='https://upload.wikimedia.org/wikipedia/commons/3/3d/Asahi-eg-company_icon.png')
+
+    await ctx.send(embed=embed)
+
 if __name__ == "__main__":
     cogs_dir = config['COGS_DIR']
 
