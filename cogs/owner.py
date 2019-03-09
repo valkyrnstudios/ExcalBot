@@ -44,7 +44,13 @@ class OwnerCog(commands.Cog, name='Owner commands', command_attrs=dict(hidden=Tr
             self.bot.unload_extension(cog)
             self.bot.load_extension(cog)
         except Exception as e:
-            await ctx.send(f'**`ERROR:`** {type(e).__name__} - {e}')
+            try:
+                self.bot.unload_extension(f'cogs.{cog}')
+                self.bot.load_extension(f'cogs.{cog}')
+            except Exception as e:
+                await ctx.send(f'**`ERROR:`** {type(e).__name__} - {e}')
+            else:
+                await ctx.send('**`SUCCESS`**')
         else:
             await ctx.send('**`SUCCESS`**')
 
