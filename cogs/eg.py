@@ -28,6 +28,27 @@ class EG(commands.Cog, name='Eternal Gamers'):
 
         await ctx.send(embed=embed)
 
+    @commands.command(name='info', aliases=['raidtime', 'raidtimes'])
+    async def info(self, ctx):
+        embed = discord.Embed(title='http://eternalgamers.org',
+                              description='Guild website',
+                              colour=2550255)
+
+        embed.set_author(name='Guild website',
+                         url='http://eternalgamers.org/events',
+                         icon_url='https://upload.wikimedia.org/wikipedia/commons/3/3d/Asahi-eg-company_icon.png')
+
+        embed.add_field(name=':clock2: **Raid Times** :clock2:',
+                        value='Monday: 8-11PM Eastern Time (01:00 - 04:00 Server Time)\nThur: 8-11PM Eastern Time (01:00 - 04:00 Server Time)\n**Please arrive 15 mins prior for raid invites and bring all consumables and gear you will need.\n**')
+
+        embed.add_field(name=':no_entry: **Required Addons** :no_entry:',
+                        value='Threat Meter (DTM > Omen)\nDeadlyBossMobs OR BigWigs\nGuild2Guild\n\nSee `!addons` in discord for Addon Downloads')
+
+        embed.set_footer(text='EGBot',
+                        icon_url='https://upload.wikimedia.org/wikipedia/commons/3/3d/Asahi-eg-company_icon.png')
+
+        await ctx.send(embed=embed)
+
     @commands.command(name='beef', aliases=['twam'], hidden=True)
     async def beef(self, ctx):
         messages_list = ['Soon:tm:', 'Made by Twam:tm:']
