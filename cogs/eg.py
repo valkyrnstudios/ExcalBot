@@ -30,7 +30,7 @@ class EG(commands.Cog, name='Eternal Gamers'):
 
     @commands.command(name='beef', aliases=['twam'], hidden=True)
     async def beef(self, ctx):
-        await ctx.send('Soon:tm:')
+        await ctx.send('Soon:tm:', 'Made by Twam:tm:')
 
     @commands.command(name='kynura', aliases=['kahira'], hidden=True)
     async def kynura(self, ctx):
