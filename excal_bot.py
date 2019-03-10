@@ -69,5 +69,7 @@ if __name__ == "__main__":
         except Exception as e:
             print(f'Failed to load extension {extension}.')
             traceback.print_exc()
-
-    bot.run(config['BOT_TOKEN'])
+    try:
+        bot.run(config['BOT_TOKEN'])
+    except KeyboardInterrupt:
+        bot.logout()
