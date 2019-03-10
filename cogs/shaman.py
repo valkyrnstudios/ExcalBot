@@ -87,6 +87,13 @@ class Shaman(commands.Cog, name='Shaman information'):
 /castsequence [mod] reset=8 Windfury Totem, Mana Spring Totem, Strength of Earth Totem
 ```
 
+**Chain macro**
+Rank 4 with rank 2 downrank
+```
+/cast [nomod,target=mouseover,exists][nomod,exists][nomod] Chain Heal(Rank 4)
+/cast [mod,target=mouseover,exists][mod,exists][mod]Chain Heal(Rank 2)
+```
+
 ''')
 
     @totems.command(name='ele', aliases=['elemental'])
