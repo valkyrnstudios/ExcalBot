@@ -31,7 +31,19 @@ class Specs(commands.Cog, name='Spec commands'):
 
     @spec.command(name='enh', aliases=['enha'])
     async def _specenh(self, ctx):
-        await ctx.send('Spec Enhancement')
+        await ctx.send('''**Enhancement Shaman Spec**
+
+http://db.excalibur.ws/?talent#hZxVbdVMsAuqoxbez
+https://i.imgur.com/bwUt36c.png
+
+**Single button proper weapon imbues** - https://forum.excalibur.ws/topic/1091-enhancement-weapon-imbues/
+Left-click twice to apply, right-click to remove.
+```
+/castsequence [nobtn:2] reset=3 Windfury Weapon, Flametongue Weapon
+/stopmacro [nobtn:2]
+/run local c=CancelItemTempEnchantment c(1) c(2)
+```
+''')
 
 def setup(bot):
     bot.add_cog(Specs(bot))
