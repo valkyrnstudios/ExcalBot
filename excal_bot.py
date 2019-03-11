@@ -2,6 +2,7 @@ import json
 import asyncio
 import traceback
 import discord
+import logging
 
 from discord import Game, Status
 from discord.ext import commands
@@ -10,6 +11,7 @@ from os import listdir
 from os.path import isfile, join
 
 import logger
+log = logging.getLogger('excal_bot')
 
 with open('config.json') as json_data_file:
     config = json.load(json_data_file)
@@ -27,8 +29,8 @@ async def on_message(message):
     if message.author.bot:
         return
 
-    #print(f'Original {message.content}')
-    message.content = message.content.lower()
+    original_message = message.content
+    message.content = original_message.lower()
 
     if message.content in help_aliases:
         message.content = '!help'
@@ -38,7 +40,8 @@ async def on_message(message):
             message.content = message.content.replace(prefix, f'{prefix} ')
             break
 
-    #print(f'Transformed {message.content}')
+    if original_message != message.content:
+        log.info(f'Transformed: ({original_message}) into ({message.content})')
 
     await bot.process_commands(message)
 
