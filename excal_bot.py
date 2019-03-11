@@ -11,6 +11,8 @@ from os import listdir
 from os.path import isfile, join
 
 import logger
+import analytics as Analytics
+
 log = logging.getLogger('excal_bot')
 
 with open('config.json') as json_data_file:
@@ -18,6 +20,11 @@ with open('config.json') as json_data_file:
 
 prefix_separators = config['PREFIX_SEPARATORS']
 help_aliases = config['HELP_ALIASES']
+enable_stats = config['ENABLE_STATS']
+bot_prefix = config['BOT_PREFIX']
+
+if config['ENABLE_STATS']:
+    analytics = Analytics.Analytics()
 
 bot = commands.Bot(
     case_insensitive=True,
@@ -31,6 +38,9 @@ async def on_message(message):
 
     original_message = message.content
     message.content = original_message.lower()
+
+    if message.content.startswith(bot_prefix, 0, 1) and enable_stats:
+        analytics.log_message(message)
 
     if message.content in help_aliases:
         message.content = '!help'
