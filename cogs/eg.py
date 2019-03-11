@@ -49,6 +49,60 @@ class EG(commands.Cog, name='Eternal Gamers'):
 
         await ctx.send(embed=embed)
 
+    @commands.command(name='addons')
+    async def addons(self, ctx):
+        embed = discord.Embed(title='http://eternalgamers.org',
+                              description='**A list of the more common addons including download links.**',
+                              colour=2550255)
+
+        embed.set_author(name='Addon Downloads',
+                         icon_url='https://upload.wikimedia.org/wikipedia/commons/3/3d/Asahi-eg-company_icon.png')
+
+        embed.add_field(name='Be sure to enable out of date addons in the client',
+                        value='''
+**Ace Library Addons (Required for some addons to work)**
+https://twam.uk7.org/files/Ace123.zip
+
+**CombatLogClearer (Alternative to the Macro)**
+https://twam.uk7.org/files/CombatLogClearer.zip
+
+**DiamondThreatMeter (DTM)**
+https://twam.uk7.org/files/DiamondThreatMeter.zip
+
+**DeadlyBossMods (DBM)**
+https://twam.uk7.org/files/DeadlyBossMods.zip
+
+**BigWigs (DBM Alternative)**
+https://twam.uk7.org/files/BigWigs.zip
+
+**Guild2Guild**
+https://twam.uk7.org/files/Guild2Guild.zip
+
+**PallyPower**
+https://twam.uk7.org/files/PallyPower.zip
+
+**Prat (Chat Addon)**
+https://twam.uk7.org/files/Prat.zip
+
+**Recount**
+https://twam.uk7.org/files/Recount.zip
+
+**xperl**
+https://twam.uk7.org/files/xperl.zip
+
+**Grid**
+https://twam.uk7.org/files/Grid.zip
+
+**Full Addon Pack**
+https://twam.uk7.org/files/Addons.zip
+''')
+
+
+        embed.set_footer(text='EGBot',
+                        icon_url='https://upload.wikimedia.org/wikipedia/commons/3/3d/Asahi-eg-company_icon.png')
+
+        await ctx.send(embed=embed)
+
     @commands.command(name='beef', aliases=['twam'], hidden=True)
     async def beef(self, ctx):
         messages_list = ['Soon:tm:', 'Made by Twam:tm:']
