@@ -9,6 +9,8 @@ from discord.ext import commands
 from os import listdir
 from os.path import isfile, join
 
+import logger
+
 with open('config.json') as json_data_file:
     config = json.load(json_data_file)
 
