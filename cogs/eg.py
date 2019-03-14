@@ -125,5 +125,9 @@ https://twam.uk7.org/files/Addons.zip
     async def cath(self, ctx):
         await ctx.send('/reroll mage')
 
+    @commands.command(name='fading', hidden=True)
+    async def fading(self, ctx):
+        await ctx.send('https://i.imgur.com/XdjGCWh.jpg')
+
 def setup(bot):
     bot.add_cog(EG(bot))
