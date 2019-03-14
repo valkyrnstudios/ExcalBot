@@ -129,5 +129,9 @@ https://twam.uk7.org/files/Addons.zip
     async def fading(self, ctx):
         await ctx.send('https://i.imgur.com/XdjGCWh.jpg')
 
+    @commands.command(name='gucci', hidden=True)
+    async def gucci(self, ctx):
+        await ctx.send('Totes gucci lit af fam #420 blaze it swag:tm:')
+
 def setup(bot):
     bot.add_cog(EG(bot))
