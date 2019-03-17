@@ -65,5 +65,26 @@ https://i.imgur.com/uQkoYDP.png
 No, go to Wrath+.
 ''')
 
+    @spec.command(name='feral', aliases=['bear']])
+    async def _specferal(self, ctx):
+        await ctx.send('''**Feral Druid Spec**
+http://db.excalibur.ws/?talent#0ZxhGsfroezioVxIz
+https://i.imgur.com/BS7Wwwi.png
+''')
+
+    @spec.command(name='rdruid', aliases=['rdudu']])
+    async def _specrdruid(self, ctx):
+        await ctx.send('''**Resto Druid Spec**
+http://db.excalibur.ws/?talent#0LZZxVIxeqrest
+https://i.imgur.com/Mj6AsJt.png
+''')
+
+    @spec.command(name='moonkin', aliases=['oomkin', 'boomkin']])
+    async def _specrmoonkin(self, ctx):
+        await ctx.send('''**Boomkin Druid Spec**
+http://db.excalibur.ws/?talent#0xzrdicsguAZZxMIb
+https://i.imgur.com/MeUKJbL.png
+''')
+
 def setup(bot):
     bot.add_cog(Specs(bot))
