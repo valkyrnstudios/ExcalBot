@@ -52,34 +52,34 @@ http://db.excalibur.ws/?talent#cxbZVxbRVZIhoMxcMhVbb
 https://i.imgur.com/NBfiDo6.png
 ''')
 
-    @spec.command(name='bm'])
+    @spec.command(name='bm')
     async def _specbm(self, ctx):
         await ctx.send('''**BM Hunter Spec**
 http://db.excalibur.ws/?talent#ctbMztxRwuVoVVbRV
 https://i.imgur.com/uQkoYDP.png
 ''')
 
-    @spec.command(name='mm', aliases=['marksman']])
+    @spec.command(name='mm', aliases=['marksman'])
     async def _specbm(self, ctx):
         await ctx.send('''**Marksman Hunter Spec**
 No, go to Wrath+.
 ''')
 
-    @spec.command(name='feral', aliases=['bear']])
+    @spec.command(name='feral', aliases=['bear'])
     async def _specferal(self, ctx):
         await ctx.send('''**Feral Druid Spec**
 http://db.excalibur.ws/?talent#0ZxhGsfroezioVxIz
 https://i.imgur.com/BS7Wwwi.png
 ''')
 
-    @spec.command(name='rdruid', aliases=['rdudu']])
+    @spec.command(name='rdruid', aliases=['rdudu'])
     async def _specrdruid(self, ctx):
         await ctx.send('''**Resto Druid Spec**
 http://db.excalibur.ws/?talent#0LZZxVIxeqrest
 https://i.imgur.com/Mj6AsJt.png
 ''')
 
-    @spec.command(name='moonkin', aliases=['oomkin', 'boomkin']])
+    @spec.command(name='moonkin', aliases=['oomkin', 'boomkin'])
     async def _specmoonkin(self, ctx):
         await ctx.send('''**Boomkin Druid Spec**
 http://db.excalibur.ws/?talent#0xzrdicsguAZZxMIb
