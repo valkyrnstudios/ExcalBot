@@ -45,5 +45,25 @@ Left-click twice to apply, right-click to remove.
 ```
 ''')
 
+    @spec.command(name='surv', aliases=['survival', 'sv'])
+    async def _specsurv(self, ctx):
+        await ctx.send('''**Survival Hunter Spec**
+http://db.excalibur.ws/?talent#cxbZVxbRVZIhoMxcMhVbb
+https://i.imgur.com/NBfiDo6.png
+''')
+
+    @spec.command(name='bm'])
+    async def _specbm(self, ctx):
+        await ctx.send('''**BM Hunter Spec**
+http://db.excalibur.ws/?talent#ctbMztxRwuVoVVbRV
+https://i.imgur.com/uQkoYDP.png
+''')
+
+    @spec.command(name='mm', aliases=['marksman']])
+    async def _specbm(self, ctx):
+        await ctx.send('''**Marksman Hunter Spec**
+No, go to Wrath+.
+''')
+
 def setup(bot):
     bot.add_cog(Specs(bot))
