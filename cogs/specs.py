@@ -80,7 +80,7 @@ https://i.imgur.com/Mj6AsJt.png
 ''')
 
     @spec.command(name='moonkin', aliases=['oomkin', 'boomkin']])
-    async def _specrmoonkin(self, ctx):
+    async def _specmoonkin(self, ctx):
         await ctx.send('''**Boomkin Druid Spec**
 http://db.excalibur.ws/?talent#0xzrdicsguAZZxMIb
 https://i.imgur.com/MeUKJbL.png
