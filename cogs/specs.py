@@ -52,7 +52,7 @@ http://db.excalibur.ws/?talent#cxbZVxbRVZIhoMxcMhVbb
 https://i.imgur.com/NBfiDo6.png
 ''')
 
-    @spec.command(name='bm')
+    @spec.command(name='bm', aliases=['beastmastery'])
     async def _specbm(self, ctx):
         await ctx.send('''**BM Hunter Spec**
 http://db.excalibur.ws/?talent#ctbMztxRwuVoVVbRV
@@ -60,7 +60,7 @@ https://i.imgur.com/uQkoYDP.png
 ''')
 
     @spec.command(name='mm', aliases=['marksman'])
-    async def _specbm(self, ctx):
+    async def _specmm(self, ctx):
         await ctx.send('''**Marksman Hunter Spec**
 No, go to Wrath+.
 ''')
