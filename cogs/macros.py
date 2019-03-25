@@ -54,7 +54,12 @@ https://twam.uk7.org/files/CombatLogClearer.zip
 ```
 /run DEFAULT_CHAT_FRAME:AddMessage("Need 102.4 combat table coverage. Currently at: "..string.format("%.2f", GetDodgeChance()+GetBlockChance()+GetParryChance() +5))
 ```
-This macro includes the 5% base miss chance for mobs Pre-Sunwell 
+This macro includes the 5% base miss chance for mobs Pre-Sunwell
+
+**Druid crit immune macro**
+```
+/script DEFAULT_CHAT_FRAME:AddMessage(2.6-(GetCombatRatingBonus(CR_DEFENSE_SKILL)*.04+GetCombatRatingBonus(CR_CRIT_TAKEN_MELEE)),1,0.3,1)
+```
 ''')
 
     @commands.command(name='drums')
