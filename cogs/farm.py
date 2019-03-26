@@ -7,7 +7,7 @@ class Farm(commands.Cog, name='Farming macros'):
 
     @commands.command(name='farm', aliases=['farming'])
     async def farm(self, ctx):
-        await ctx.send('''**Locations for Farming*
+        await ctx.send('''**Locations for Farming**
 **Excalibur Gatherer DB**
 `!gatherdb`
 
